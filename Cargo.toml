@@ -1,17 +1,23 @@
 [package]
-name = "mouser-engine-example"
-edition = "2024"
+name = "mouser-engine-flat"
 version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
 license = "BSD-3-Clause"
+authors = ["Mouser Contributors"]
 description = "Example custom Mouser rendering engine (\"flat\"): CPU raster presented with softbuffer"
-repository = ""
-publish = false
+repository = "https://github.com/WeirdBrains/mouser-engine-flat"
+homepage = "https://github.com/WeirdBrains/mouser-engine-flat"
+readme = "README.md"
+keywords = ["terminal", "mouser", "renderer", "example"]
+categories = ["rendering"]
+exclude = ["/.github", "/legacy"]
 
 [lib]
 name = "mouser_engine_flat"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-mouser-engine-abi = { path = "../mouser-engine-abi" }
+mouser-engine-abi = "1.0"
 softbuffer = "0.4.6"
 raw-window-handle = "0.6"
